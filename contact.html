@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chitragandh Photography</title>
+        <meta name = "viewport" content = "width=device-width, intial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <!-- header -->
+        <header class = "header">
+            <div class = "nav-section">
+                <div class = "brand-and-navBtn">
+                    <span class = "brand-name">
+                        Chitragandh
+                    </span>
+                    <span class = "navBtn flex">
+                        <i class = "fas fa-bars"></i>
+                    </span>
+                </div>
+
+                <!-- navigation menu -->
+                <nav class = "top-nav">
+                    <ul>
+                        <li><a href = "index.html">Home</a></li>
+                        <li><a href = "gallery.html">Gallery</a></li>
+                        <li><a href = "blog.html" >Blog</a></li>
+                        <li><a href = "contact.html" class = "active">Contact</a></li>
+                    </ul>
+                </nav>
+                <span class = "search-icon">
+                    <i class = "fas fa-search"></i>
+                </span>
+            </div>
+
+            <div class = "container about">
+                <div class = "about-content">
+                    <div class = "about-img flex">
+                        <img src = "images/about-img.jpg" alt = "photographer img">
+                    </div>
+                    <h2>Chitragandh Photography</h2>
+                    <h3>Photographer | Traveller</h3>
+                    <blockquote>
+                        "Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever ... It remembers little things, long after you have forgotten everything."
+                        <span>-Aaron Siskind</span>
+                    </blockquote>
+                </div>
+
+                <div class = "social-icons">
+                    <ul>
+                        <li>
+                            <a href = "#"><i class = "fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href = "#"><i class = "fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href = "#"><i class = "fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href = "#"><i class = "fab fa-pinterest"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- end of header -->
+<!-- end of header -->
+
+<!-- main -->
+<section class="section-five">
+    <div class="container">
+        <div class="contact-top">
+            <h3>CONTACT US</h3>
+            <p>WE provides comprehensive photography coverage for a wide range of events, including weddings,Birthday Party, corporate gatherings, family reunions, and cultural celebrations. Their expertise ensures that every moment is expertly captured, preserving memories to be cherished for years to come.</p>
+        </div>
+
+        <div class="contact-middle">
+            <div>
+                <span class="contact-icon">
+                    <i class="fas fa-map-signs"></i>
+                </span>
+                <span>Address</span>
+                <p>NIPHAD</p>
+            </div>
+
+            <div>
+                <span class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </span>
+                <span>Contact Number</span>
+                <p>9282787822</p>
+            </div>
+
+            <div>
+                <span class="contact-icon">
+                    <i class="fas fa-paper-plane"></i>
+                </span>
+                <span>Email Address</span>
+                <p>ChitragandhPhotography@gmail.com</p>
+            </div>
+
+            <div>
+                <span class="contact-icon">
+                    <i class="fas fa-globe"></i>
+                </span>
+                <span>Website</span>
+                <p>www.ChitragandhPhotography.com</p>
+            </div>
+        </div>
+        <div class="contact-top">
+            <h3>BOOK NOW</h3>
+            <p>Once you've finalized your event, simply proceed to the "Book Now" section. Upon submission, we'll promptly reach out to you via email to confirm your booking details and discuss any specific requirements or preferences you may have. Our dedicated team at Komal Photo Studio is committed to providing personalized service and ensuring that your photography experience exceeds expectations. We look forward to connecting with you soon to finalize the arrangements and capture your special moments with creativity and care.</p>
+        <div class="contact-bottom">
+            <form class="form" id="contactForm" action="/" onsubmit="return validateForm()">
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                <input type="text" name="eventName" id="eventName" placeholder="Event Name" required>
+                <textarea rows="9" id="description" name="description" placeholder="Description" required></textarea>
+                <input type="submit" class="btn" value="Send Message">
+            </form>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3747.3845111805713!2d74.1075785746897!3d20.076207219813714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddcfe24426443b%3A0x8b77017e0985d9ca!2sChitragandh%20Photo%20%26%20Films!5e0!3m2!1sen!2sin!4v1717517070992!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+</section>
+<!-- end of main -->
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container container">
+    </div>
+    <p>&copy; Copyright komalattarde</p>
+</footer>
+<!-- end of footer -->
+
+<script>
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var eventName = document.getElementById("eventName").value;
+        var description = document.getElementById("description").value;
+
+        // Check if any field is empty
+        if (name == "" || email == "" || eventName == "" || description == "") {
+            alert("Please fill out all fields.");
+            return false;
+        }
+
+        // Check email format
+        var emailRegex = /^\S+@\S+\.\S+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        else {
+            confirm("Do you want to submit the form?");
+            if(confirm)
+            {
+                alert("Form submitted successfully");
+            }
+        }
+    }
+</script>
+</body>
+</html>
